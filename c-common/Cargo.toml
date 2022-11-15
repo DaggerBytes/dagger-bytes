@@ -1,0 +1,8 @@
+[package]
+name = "dagger-bytes-c-common"
+version = "0.0.0"
+edition = "2021"
+
+[lib]
+name = "dagger_bytes_c_common"
+crate-type = ["rlib", "staticlib"]

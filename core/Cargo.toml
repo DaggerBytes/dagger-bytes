@@ -1,0 +1,14 @@
+[package]
+name = "dagger-bytes-core"
+version = "0.0.0"
+edition = "2021"
+
+[dependencies]
+# For release.
+# "dagger-bytes-common" = { version = "0.0.0" }
+# For local development.
+"dagger-bytes-common" = { path = "../common" }
+
+[lib]
+name = "dagger_bytes_core"
+crate-type = ["rlib"]

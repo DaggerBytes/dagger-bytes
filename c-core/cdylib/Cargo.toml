@@ -1,0 +1,23 @@
+[package]
+name = "dagger-bytes-core-cdylib"
+version = "0.0.0"
+edition = "2021"
+
+[dependencies]
+# For release.
+# "dagger-bytes-c-common" = { version = "0.0.0" }
+# For local development.
+"dagger-bytes-c-common" = { path = "../../c-common" }
+# For release.
+# "dagger-bytes-common" = { version = "0.0.0" }
+# For local development.
+"dagger-bytes-common" = { path = "../../common" }
+# For release.
+# "dagger-bytes-core" = { version = "0.0.0" }
+# For local development.
+"dagger-bytes-core" = { path = "../../core" }
+
+[lib]
+name = "dagger_bytes_core"
+crate-type = ["cdylib"]
+path = "../src/lib.rs"

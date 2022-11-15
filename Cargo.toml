@@ -1,0 +1,24 @@
+[workspace]
+members = [
+    # Emulation framework core to create emulation architectures.
+    "core",
+    "c-core/cdylib",    # To expose the Rust emulation core library as a C dynamic library.
+    "c-core/staticlib", # To expose the Rust emulation core library as a C static library.
+
+    # Library with emulation implementations (e.g. ARM, ARM64, X86, X64, ...etc.).
+    "emu",
+    "c-emu/cdylib",     # To expose the Rust emulation implementations library as a C dynamic library.
+    "c-emu/staticlib",  # To expose the Rust emulation implementations library as a C static library.
+
+    # Common API for Rust code.
+    "common",
+
+    # Common API for C code that would be shared along with any C libraries/headers built.
+    "c-common",
+]
+
+default-members = [
+    # Only build the Rust libraries by default.
+    "core",
+    "emu"
+]
